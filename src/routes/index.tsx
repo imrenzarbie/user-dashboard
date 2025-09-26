@@ -1,4 +1,4 @@
-import UsersPage from "@/features/dashboard/users-page";
+import UsersPage from "@/features/users/users-page";
 import { RootLayout } from "@/layouts/root-layout";
 import { createBrowserRouter } from "react-router";
 
