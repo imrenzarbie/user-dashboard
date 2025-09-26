@@ -1,5 +1,3 @@
-"use client";
-
 import * as React from "react";
 import {
     Search,
@@ -35,9 +33,6 @@ import {
 } from "@/components/ui/dropdown-menu";
 import { DropdownMenuTrigger } from "@radix-ui/react-dropdown-menu";
 
-/* -------------------------------------------------
- * Table column definitions
- * ------------------------------------------------*/
 const columns: ColumnDef<User>[] = [
     {
         accessorKey: "identityId",
@@ -58,12 +53,8 @@ const columns: ColumnDef<User>[] = [
     },
 ];
 
-/* -------------------------------------------------
- * Main page component
- * ------------------------------------------------*/
-export default function UsersPage() {
+const UsersPage = () => {
     const [globalFilter, setGlobalFilter] = React.useState("");
-    const [showAdvanced, setShowAdvanced] = React.useState(false);
 
     const table = useReactTable({
         data: users,
@@ -222,4 +213,6 @@ export default function UsersPage() {
             </div>
         </div>
     );
-}
+};
+
+export default UsersPage;
